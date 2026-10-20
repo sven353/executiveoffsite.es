@@ -1,0 +1,27 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Owner invite links carry a secret in the URL, so never leak it through the Referer header.
+[[headers]]
+  for = "/owner/*"
+  [headers.values]
+    Referrer-Policy = "no-referrer"
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    Referrer-Policy = "no-referrer"
+    X-Robots-Tag = "noindex, nofollow"

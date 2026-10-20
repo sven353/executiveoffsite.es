@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Forms</title>
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <!-- Static copies of the forms submitted by the Next.js app. Netlify reads these at deploy time. -->
+    <form name="inquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="text" name="bot-field" />
+      <input type="text" name="venue" />
+      <input type="text" name="venueSlug" />
+      <input type="text" name="preferredDates" />
+      <input type="text" name="datesFlexible" />
+      <input type="text" name="groupSize" />
+      <input type="text" name="singleRoomsRequired" />
+      <input type="text" name="facilitation" />
+      <input type="text" name="name" />
+      <input type="text" name="company" />
+      <input type="text" name="role" />
+      <input type="email" name="email" />
+      <input type="text" name="phone" />
+      <textarea name="message"></textarea>
+      <input type="text" name="consent" />
+    </form>
+
+    <form
+      name="venue-application"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="text" name="bot-field" />
+      <input type="text" name="venueName" />
+      <input type="text" name="region" />
+      <input type="text" name="singleRooms" />
+      <input type="text" name="website" />
+      <input type="text" name="contactName" />
+      <input type="email" name="email" />
+      <input type="text" name="phone" />
+      <textarea name="message"></textarea>
+      <input type="text" name="consent" />
+    </form>
+  </body>
+</html>
